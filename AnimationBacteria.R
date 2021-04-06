@@ -80,7 +80,7 @@ Receptor <- 0
 Zeroes <- 0
 
 #gridsize
-gz <- 500
+gz <- 150
 
 #theta constant
 theta <- 0.8
@@ -163,13 +163,12 @@ BacNumber <-Seed
 while (BacNumber<(0.95*(gz^2))) {
   
 
-  
+  for (randomindex in length(Masterlist[[2]]:1)){
   #Soace 42 the meaning of life
   Spacec <- c(42)
   Trash <-0
   
   # Picking a bacteria 
-  randomindex <- Randombac()
   posicaox <- Masterlist[[1]][randomindex]
   posicaoy <- Masterlist[[2]][randomindex]
   
@@ -414,7 +413,7 @@ while (BacNumber<(0.95*(gz^2))) {
   realtime  <- realtime+1
   cat("T:",realtime,"\n" )
   cat("B:",BacNumber,"\n" )
-  if (realtime%%500==0){
+  if (realtime%%(gridsize*2)==0){
   # 1. Open jpeg file
   jpeg(paste(realtime,"rplot.jpg"), width = 3000, height = 3000)
   # 2. Create the plot
@@ -426,7 +425,7 @@ while (BacNumber<(0.95*(gz^2))) {
   }
 }
 
-  
+}
   
   # timex<-append(timex,realtime)
   # plasmidy<-append(plasmidy,(Transconjugant+Donor)/(Transconjugant+Donor+Receptor))
@@ -457,7 +456,7 @@ sample(c(1:length(receptorc)),1,replace=TRUE)
 
 
 
-if (c(1:length(bacchain[[1]]))[is.na(Masterlist[[1]])==TRUE]){
+if (c(1:length(Masterlist[[1]]))[is.na(Masterlist[[1]])==TRUE]){
   print(Masterlist[[1]][randomindex],Masterlist[[2]][randomindex],Masterlist[[3]][randomindex],Masterlist[[4]][randomindex])
 }
 
