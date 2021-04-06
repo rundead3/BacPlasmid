@@ -94,9 +94,9 @@ field <- matrix(c(0:0), nrow=gz,ncol=gz)
 
 gridvalues <- c(1:gz)
 
+fillage <- 0.005
 #Initial number of bacterias Seeded
-Seed <- max(round((gz^2 / 100)*0.95/2 )*2,2)
-
+Seed <- max(round(gz^2*fillage/2)*2,2)
 
 #Quantum Bacterioteleportation function
 donut <- function(coordinate) {
@@ -163,7 +163,7 @@ BacNumber <-Seed
 while (BacNumber<(0.95*(gz^2))) {
   
 
-  for (randomindex in length(Masterlist[[2]]:1)){
+  for (randomindex in length(Masterlist[[2]]):1){
   #Soace 42 the meaning of life
   Spacec <- c(42)
   Trash <-0
@@ -174,7 +174,7 @@ while (BacNumber<(0.95*(gz^2))) {
   
   if (Masterlist[[3]][randomindex]==TRUE){
     
-    
+   
     #Check for blockage
     size <- 1
     foodc <- c()
@@ -409,11 +409,13 @@ while (BacNumber<(0.95*(gz^2))) {
     }
     }
   }  
+  } 
 }
+  
   realtime  <- realtime+1
   cat("T:",realtime,"\n" )
   cat("B:",BacNumber,"\n" )
-  if (realtime%%(gridsize*2)==0){
+  
   # 1. Open jpeg file
   jpeg(paste(realtime,"rplot.jpg"), width = 3000, height = 3000)
   # 2. Create the plot
@@ -422,62 +424,11 @@ while (BacNumber<(0.95*(gz^2))) {
   plot(field, col=c('white', 'green','blue','red'), breaks=c(0, 1, 2,3,4),border=NA)   
   
   dev.off()
-  }
+  
 }
 
-}
-  
+ 
   # timex<-append(timex,realtime)
   # plasmidy<-append(plasmidy,(Transconjugant+Donor)/(Transconjugant+Donor+Receptor))
   
-
-
-# print(field) 
-# print(timex)
-plot(field, col=c('white', 'green','blue','red'), breaks=c(0, 1, 2,3,4))   
-
-# plot(timex,plasmidy)
-
-
-
-receptorc <- cbind(receptorc,c(5,8))
-
-
-
-length(receptorc)
-
-
-receptorc[6]
-
-
-sample(c(1:length(receptorc)),1,replace=TRUE)
-
-
-
-
-
-if (c(1:length(Masterlist[[1]]))[is.na(Masterlist[[1]])==TRUE]){
-  print(Masterlist[[1]][randomindex],Masterlist[[2]][randomindex],Masterlist[[3]][randomindex],Masterlist[[4]][randomindex])
-}
-
-
-
-
-
-
-
-
-
-
-# Time Creation !!!!
-
-
-#TESTAGE
-
-
-
-
-
-c(1,2,3,4)[c(TRUE,TRUE,TRUE,TRUE,TRUE)]
-
 
