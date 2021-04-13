@@ -1,5 +1,36 @@
+<<<<<<< Updated upstream
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
 /.vs/slnx.sqlite
+=======
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/BacPlasmids/v16/.suo
+1 rplot.jpg
+10 rplot.jpg
+11 rplot.jpg
+12 rplot.jpg
+13 rplot.jpg
+14 rplot.jpg
+15 rplot.jpg
+16 rplot.jpg
+17 rplot.jpg
+18 rplot.jpg
+19 rplot.jpg
+2 rplot.jpg
+20 rplot.jpg
+21 rplot.jpg
+22 rplot.jpg
+23 rplot.jpg
+24 rplot.jpg
+25 rplot.jpg
+3 rplot.jpg
+4 rplot.jpg
+5 rplot.jpg
+6 rplot.jpg
+7 rplot.jpg
+8 rplot.jpg
+9 rplot.jpg
+>>>>>>> Stashed changes
