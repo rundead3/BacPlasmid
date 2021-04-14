@@ -80,8 +80,12 @@ Zeroes <- 0
 gz <- 150
 
 #theta constants
-theta1 <- 0.8
-theta2 <- 1.3
+thetaCustom <- 0.8
+thetaRandomAmount <- 2  #MAX 5 because then we run out of colors!
+thetaRandomRange <- 0.5:2
+thetas <- c(thetaCustom)
+thetas <- append(thetas, runif(thetaRandomAmount, min=thetaRandomRange[1], max=thetaRandomRange[2]))
+thetas
 
 #conjugation constants
 conjc1<- 0.2
@@ -101,9 +105,9 @@ donut <- function(coordinate) {
   ((coordinate-1)%%gz)+1
 }
 
-
 #Crescer Bacterias
-#tipo 1-Receptoras, tipo 2 - Doadoras
+#tipo 1-Receptoras, tipo 2+ - Doadoras
+_________________________for
 
   bac <- 0
   while (bac<Seed/2){
@@ -157,8 +161,8 @@ while (bac<Seed){
 
 realtime  <- 0
 BacNumber <-Seed
-
-while (BacNumber<(0.95*(gz^2))) {
+maxFill <- 0.94 
+while (BacNumber<(maxFill*(gz^2))) {
   
 
   for (randomindex in length(Masterlist[[2]]):1){
@@ -219,11 +223,11 @@ while (BacNumber<(0.95*(gz^2))) {
       
     
       #Bacterial Growth calculation
-      if (foodc>=theta1){
+      if (foodc>=thetaCustom){
         growth <- 1
         
       } else {
-        growth <- (foodc/theta1)
+        growth <- (foodc/thetaCustom)
         
       }
       
@@ -419,12 +423,11 @@ while (BacNumber<(0.95*(gz^2))) {
   # 2. Create the plot
 
   # 3. Close the file
-  plot(field, col=c('white', 'green','blue','red'), breaks=c(0, 1, 2,3,4),border=NA)   
+  plot(field, col=c('white', 'green','blue','red', sample(c('black','yellow','magenta','cyan','gray'), thetaRandomAmount, replace = FALSE)), breaks=c(c(0, 1, 2,3,4), 5:(5+thetaRandomAmount)),border=NA)   
   
   dev.off()
   
 }
 
- 
   # timex<-append(timex,realtime)
   # plasmidy<-append(plasmidy,(Transconjugant+Donor)/(Transconjugant+Donor+Receptor))
