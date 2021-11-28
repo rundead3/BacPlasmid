@@ -31,10 +31,11 @@ kings
 8 props
 
 - id_num
-- element (fire/water/ice/forest)
-- race (fox, turtle, owl, mantis) 
-- necklace
-- 
+- element (fire/water/forest/mountain)                        4
+- race (fox, turtle, owl, mantis)                             16
+- fatness (slim, normal, muscle, fat, phaaatttt)              80
+- glasses (?????... 7 glasses)                                560
+- live/undead                                                 1020
 
 
 ==================
