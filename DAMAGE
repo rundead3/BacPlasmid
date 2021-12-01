@@ -38,6 +38,17 @@ kings
 - live/undead                                                 1020
 - Race specific clothing/assets/props/etc                     10000
 
+
+--------------
+simpler just mantis:
+
+- id_num
+- mantis color: element (fire/water/forest/mountain)          4
+- fang shape                                                  16
+- fang color (stained/soaked/bloodied)     optional 8 colors  128
+- wings  (none/butterfly/demon/angel/standard/dragonfly)      768
+- stance?
+
 ==================
 
 website
