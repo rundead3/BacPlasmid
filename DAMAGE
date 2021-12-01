@@ -44,10 +44,27 @@ website
 
 ==================
 
+unity webGL?
+
+==================
+
 blockchain smart contract
 
 - how mutable nfts???????
 
 ==================
+
+player count          =  10000
+land tiles            =  
+
+walk chance           =  WC  = //// * SA
+capture chance        =  CC
+kill chance           =  KC
+
+stake amount          =  SA  = 100^(1.1*LO) || 
+lands owned           =  LO
+total tiles captured  =  
+
+SA =
 
 
